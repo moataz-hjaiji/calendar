@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  border: 1px solid #f2f4f7;
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+  border-radius: 12px;
+  padding: 3.5rem;
+}
+.calendar .monthSelected {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar .monthSelected .monthyear {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #344054;
+}
+.calendar .monthSelected .arrow {
+  all: unset;
+  display: flex;
+}
+.calendar .dateSelected {
+  display: flex;
+  gap: 1.5rem;
+}
+.calendar .dateSelected .dateselect,
+.calendar .dateSelected .dayselect {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #101828;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+.calendar .dateSelected .dateselect {
+  padding: 1rem 8.5rem 1rem 1rem;
+}
+.calendar .dateSelected .dayselect {
+  padding: 1rem 3.2rem;
+}
+.calendar .day {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 2rem 0.5rem;
+}
+.calendar .day .dayweek,
+.calendar .day .daydate {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #344054;
+}
+.calendar .day .dayweek {
+  font-weight: 500;
+}
+.calendar .day .daydate {
+  font-weight: 400;
+}
+.calendar .day .daydate.excluded {
+  color: red;
+}
+.calendar .day .daydate.current-day:not(.excluded) {
+  background: #9faaaf;
+  border-radius: 20px;
+  color: white;
+}
+.calendar .day .daydate.clicked:not(.excluded) {
+  background: #00aaf9;
+  border-radius: 20px;
+  color: white;
+}/*# sourceMappingURL=main.css.map */
